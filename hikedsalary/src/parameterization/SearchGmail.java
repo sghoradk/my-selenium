@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -29,12 +30,18 @@ public class SearchGmail {
 	
 	@FindBy(how=How.XPATH,using="//div[@role='button'][@data-tooltip='Search Mail']")
 	WebElement search;
+	
+	@FindBy(how=How.XPATH,using="//input[@id='gbqfq'][@class='gbqfif']")
+	WebElement searchbar;
+	
+	String expected = "from:rohit";
+	String actual;
 		
-	public void searchEmails(String name, String sub)
+	public void searchEmails(String name, String sub) throws InterruptedException
 	{
 		show_search_options.click();
 		from.sendKeys(name);
-		
+		Thread.sleep(7000);
 		
 		List <WebElement> listItems = driver.findElements
 				(By.xpath("//div[@role='option'][@style='-moz-user-select: none;']"));
@@ -50,26 +57,13 @@ public class SearchGmail {
 		     System.out.println("Elements name is "+name1);
 		 }
 		
-		try 
-		{
-			Thread.sleep(5000);
-		} 
-		catch (InterruptedException e1) 
-		{
-			e1.printStackTrace();
-		}
-		
+		Thread.sleep(5000);		
 		//subject.sendKeys(sub);
 		search.click();
-		try 
-		{
-			Thread.sleep(5000);
-		} 
-		catch (InterruptedException e1) 
-		{
-			e1.printStackTrace();
-		}
-				
+		Thread.sleep(5000);
+		actual = searchbar.getText();
+		System.out.println("Value in searchbar is: " +actual);
+						
 	}
 	
 }

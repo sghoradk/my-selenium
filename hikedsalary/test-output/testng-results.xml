@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36839" started-at="2017-04-11T12:58:50Z" finished-at="2017-04-11T12:59:27Z">
+  <suite name="Default suite" duration-ms="48153" started-at="2017-04-12T10:59:09Z" finished-at="2017-04-12T10:59:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="36839" started-at="2017-04-11T12:58:50Z" finished-at="2017-04-11T12:59:27Z">
+    <test name="Default test" duration-ms="48153" started-at="2017-04-12T10:59:09Z" finished-at="2017-04-12T10:59:57Z">
       <class name="parameterization.TestCases">
-        <test-method status="PASS" signature="setup()[pri:0, instance:parameterization.TestCases@91161c7]" name="setup" is-config="true" duration-ms="10358" started-at="2017-04-11T18:28:50Z" finished-at="2017-04-11T18:29:00Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:parameterization.TestCases@91161c7]" name="setup" is-config="true" duration-ms="13014" started-at="2017-04-12T16:29:09Z" finished-at="2017-04-12T16:29:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginToGmail(java.lang.String, java.lang.String)[pri:49, instance:parameterization.TestCases@91161c7]" name="loginToGmail" duration-ms="9038" started-at="2017-04-11T18:29:00Z" data-provider="SearchProvider" finished-at="2017-04-11T18:29:09Z">
+        <test-method status="PASS" signature="loginToGmail(java.lang.String, java.lang.String)[pri:49, instance:parameterization.TestCases@91161c7]" name="loginToGmail" duration-ms="8495" started-at="2017-04-12T16:29:22Z" data-provider="SearchProvider" finished-at="2017-04-12T16:29:31Z">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToGmail -->
-        <test-method status="PASS" signature="searchEmails(java.lang.String, java.lang.String)[pri:50, instance:parameterization.TestCases@91161c7]" name="searchEmails" duration-ms="15672" started-at="2017-04-11T18:29:10Z" data-provider="SearchProviderExcel" finished-at="2017-04-11T18:29:26Z">
+        <test-method status="FAIL" signature="searchEmails(java.lang.String, java.lang.String)[pri:50, instance:parameterization.TestCases@91161c7]" name="searchEmails" duration-ms="24617" started-at="2017-04-12T16:29:32Z" data-provider="SearchProviderExcel" finished-at="2017-04-12T16:29:56Z">
           <params>
             <param index="0">
               <value>
@@ -40,10 +40,51 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [from:rohit] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [from:rohit] but found []
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
+	at org.testng.Assert.assertEquals(Assert.java:115)
+	at org.testng.Assert.assertEquals(Assert.java:189)
+	at org.testng.Assert.assertEquals(Assert.java:199)
+	at parameterization.TestCases.searchEmails(TestCases.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchEmails -->
-        <test-method status="PASS" signature="close()[pri:0, instance:parameterization.TestCases@91161c7]" name="close" is-config="true" duration-ms="720" started-at="2017-04-11T18:29:26Z" finished-at="2017-04-11T18:29:27Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:parameterization.TestCases@91161c7]" name="close" is-config="true" duration-ms="719" started-at="2017-04-12T16:29:56Z" finished-at="2017-04-12T16:29:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
