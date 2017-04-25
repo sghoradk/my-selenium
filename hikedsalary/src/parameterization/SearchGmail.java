@@ -1,14 +1,20 @@
 package parameterization;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
+import org.openqa.selenium.TakesScreenshot;
 
 public class SearchGmail {
 	
@@ -53,6 +59,12 @@ public class SearchGmail {
 		while(i1.hasNext())
 		{
 		     WebElement ele1=i1.next();
+		     
+		     if(ele1.getText().contains("rohitbijwe@gmail.com"))
+		     {
+		    	 System.out.println("ele1: " +ele1.getText().contains("rohitbijwe@gmail.com"));
+		    	 ele1.click();
+		     }
 		     String name1=ele1.getText();
 		     System.out.println("Elements name is "+name1);
 		 }
@@ -63,7 +75,19 @@ public class SearchGmail {
 		Thread.sleep(5000);
 		actual = searchbar.getText();
 		System.out.println("Value in searchbar is: " +actual);
-						
+		
+		//TAKE SCREENSHOT
+		File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+		 // now copy the  screenshot to desired location using copyFile //method
+		FileUtils.copyFile(src, new File("D:\\PersonalSpace\\MySelenium\\Screenshots\\error.png"));
+		}
+		 
+		catch (IOException e)
+		 {
+		  System.out.println(e.getMessage());
+		 
+		 }
+					
 	}
-	
 }

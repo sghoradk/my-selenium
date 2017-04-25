@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48153" started-at="2017-04-12T10:59:09Z" finished-at="2017-04-12T10:59:57Z">
+  <suite name="Default suite" duration-ms="55411" started-at="2017-04-14T10:24:38Z" finished-at="2017-04-14T10:25:33Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="48153" started-at="2017-04-12T10:59:09Z" finished-at="2017-04-12T10:59:57Z">
+    <test name="Default test" duration-ms="55411" started-at="2017-04-14T10:24:38Z" finished-at="2017-04-14T10:25:33Z">
       <class name="parameterization.TestCases">
-        <test-method status="PASS" signature="setup()[pri:0, instance:parameterization.TestCases@91161c7]" name="setup" is-config="true" duration-ms="13014" started-at="2017-04-12T16:29:09Z" finished-at="2017-04-12T16:29:22Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:parameterization.TestCases@91161c7]" name="setup" is-config="true" duration-ms="19245" started-at="2017-04-14T15:54:38Z" finished-at="2017-04-14T15:54:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="loginToGmail(java.lang.String, java.lang.String)[pri:49, instance:parameterization.TestCases@91161c7]" name="loginToGmail" duration-ms="8495" started-at="2017-04-12T16:29:22Z" data-provider="SearchProvider" finished-at="2017-04-12T16:29:31Z">
+        <test-method status="PASS" signature="loginToGmail(java.lang.String, java.lang.String)[pri:49, instance:parameterization.TestCases@91161c7]" name="loginToGmail" duration-ms="9968" started-at="2017-04-14T15:54:57Z" data-provider="SearchProvider" finished-at="2017-04-14T15:55:07Z">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToGmail -->
-        <test-method status="FAIL" signature="searchEmails(java.lang.String, java.lang.String)[pri:50, instance:parameterization.TestCases@91161c7]" name="searchEmails" duration-ms="24617" started-at="2017-04-12T16:29:32Z" data-provider="SearchProviderExcel" finished-at="2017-04-12T16:29:56Z">
+        <test-method status="FAIL" signature="searchEmails(java.lang.String, java.lang.String)[pri:50, instance:parameterization.TestCases@91161c7]" name="searchEmails" duration-ms="24379" started-at="2017-04-14T15:55:08Z" data-provider="SearchProviderExcel" finished-at="2017-04-14T15:55:33Z">
           <params>
             <param index="0">
               <value>
@@ -84,7 +84,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchEmails -->
-        <test-method status="PASS" signature="close()[pri:0, instance:parameterization.TestCases@91161c7]" name="close" is-config="true" duration-ms="719" started-at="2017-04-12T16:29:56Z" finished-at="2017-04-12T16:29:57Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:parameterization.TestCases@91161c7]" name="close" is-config="true" duration-ms="476" started-at="2017-04-14T15:55:33Z" finished-at="2017-04-14T15:55:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
