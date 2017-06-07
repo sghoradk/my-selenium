@@ -13,9 +13,10 @@ public class LoginPage {
 
 	WebDriver driver;
 	
-	By username = By.id("Email");
-	By next = By.id("next");
-	By password = By.id("Passwd");
+	By username = By.id("identifierId");
+	By next1 = By.id("identifierNext");
+	By password = By.xpath("//input[@type='password'][@name='password']");
+	By next2 = By.id("passwordNext");
 	By signin = By.id("signIn");
 	
 	public LoginPage (WebDriver driver)
@@ -26,10 +27,12 @@ public class LoginPage {
 	public void loginToGmail (String uid, String passwd)
 	{
 		driver.findElement(username).sendKeys(uid);
-		driver.findElement(next).click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.findElement(next1).click();
+		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.findElement(password).sendKeys(passwd);
-		driver.findElement(signin).click();
+		System.out.println(driver.findElement(next2).isEnabled());
+		driver.findElement(next2).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		wait.until(ExpectedConditions.titleContains(uid));
 	    //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

@@ -1,6 +1,7 @@
 package parameterization;
 
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -67,7 +68,11 @@ import org.openqa.selenium.support.PageFactory;
 	    	// Created Page Object using Page Factory
 	    	SearchGmail search_gmail = PageFactory.initElements(driver, SearchGmail.class);
 	    	search_gmail.searchEmails(from, subject);
-	    	Assert.assertEquals(search_gmail.actual, search_gmail.expected);
+	    	
+	    	//TestNG Soft Assert
+	    	SoftAssert assertion = new SoftAssert();
+	    	assertion.assertEquals(search_gmail.actual, search_gmail.expected);
+	    	assertion.assertAll();
 	    }
 	    
 	    @AfterTest

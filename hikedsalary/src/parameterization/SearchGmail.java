@@ -55,8 +55,13 @@ public class SearchGmail {
 		System.out.println("Total no of elements are: "+listItems.size());
 		
 		// Now using Iterator we will iterate all elements
-		Iterator<WebElement> i1=listItems.iterator();
-		while(i1.hasNext())
+		System.out.println(listItems.size());
+		for(int i=0; i<=listItems.size(); i++)
+		{
+			System.out.println(listItems.get(i).getText());
+		}
+		//Iterator<WebElement> i1=listItems.iterator();
+		/*while(i1.hasNext())
 		{
 		     WebElement ele1=i1.next();
 		     
@@ -67,7 +72,7 @@ public class SearchGmail {
 		     }
 		     String name1=ele1.getText();
 		     System.out.println("Elements name is "+name1);
-		 }
+		 }*/
 		
 		Thread.sleep(5000);		
 		//subject.sendKeys(sub);

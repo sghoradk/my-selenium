@@ -7,7 +7,8 @@ public class DataProviderExcel {
 	@DataProvider(name="SearchProviderExcel")
 	public Object[][] getDataFromDataProvider()
 	{
-		ExcelDataConfig config = new ExcelDataConfig("D:\\PersonalSpace\\MySelenium\\Test_Data_Search_Gmail.xlsx");
+		ExcelDataConfig config = new 
+				ExcelDataConfig("D:\\PersonalSpace\\MySelenium\\Test_Data_Search_Gmail.xlsx");
 		int rows = config.getRowCount(0);
 		Object[][] data = new Object[rows][2];
 		data[0][0] = config.getData(0, 0, 0);

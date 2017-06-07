@@ -1,4 +1,4 @@
-package hikedsalary;
+package com.gmail.com;
 
 import java.util.Scanner;
 

@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="parameterization.TestCases">
+      <class name="com.gmail.com.DemoAlert">
         <methods>
-          <include name="setup"/>
-          <include name="close"/>
-          <include name="searchEmails" invocation-numbers="0"/>
+          <include name="testLinks"/>
         </methods>
-      </class> <!-- parameterization.TestCases -->
+      </class> <!-- com.gmail.com.DemoAlert -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
